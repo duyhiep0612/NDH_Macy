@@ -359,6 +359,29 @@ body::after {
     from { transform: rotate(0deg) scale(1); }
     to { transform: rotate(8deg) scale(1.08); }
 }
+
+/* ===== UNIFIED LAYOUT SYSTEM ===== */
+
+.invite-shell{
+    width:min(1120px, calc(100% - 32px));
+    margin-inline:auto;
+    position:relative;
+}
+
+.invite-section{
+    margin-bottom:72px;
+}
+
+@media (max-width: 768px){
+    .invite-shell{
+        width:calc(100% - 20px);
+    }
+
+    .invite-section{
+        margin-bottom:48px;
+    }
+}
+
 </style>
 </head>
 <body class="font-sans overflow-hidden antialiased relative" id="body-container">
@@ -405,7 +428,7 @@ body::after {
     <!-- ==========================================
          2. NỘI DUNG CHÍNH THIỆP CƯỚI
          ========================================== -->
-    <main id="main-content" class="hidden bg-floral-pattern relative overflow-x-hidden min-h-screen z-10">
+    <main id="main-content" class="hidden bg-floral-pattern relative overflow-x-hidden min-h-screen z-10"><div class="invite-shell">
         
         <!-- Hero Section -->
         <section class="pt-24 pb-16 px-4 max-w-xl mx-auto text-center relative z-10">
@@ -432,7 +455,7 @@ body::after {
         </div></section>
 
         <!-- Thông Tin Lễ Cưới -->
-        <section class="luxury-section py-16 px-4 max-w-2xl mx-auto text-center relative z-10"><div class="section-glow glow-gold"></div><div class="section-glow glow-green"></div><div class="section-content">
+        <section class="invite-section luxury-section py-16 px-4 max-w-2xl mx-auto text-center relative z-10"><div class="section-glow glow-gold"></div><div class="section-glow glow-green"></div><div class="section-content">
             <!-- Họa tiết góc -->
             <svg class="absolute top-0 left-0 w-24 h-24 text-wedding-gold/20 -z-10"><use href="#floral-corner"></use></svg>
             <svg class="absolute bottom-0 right-0 w-24 h-24 text-wedding-gold/20 -z-10" style="transform: scale(-1, -1);"><use href="#floral-corner"></use></svg>
@@ -470,7 +493,7 @@ body::after {
         </div></section>
 
         <!-- Khối Thông Tin Thời Gian Địa Điểm (Nền Accent) -->
-        <section class="py-16 bg-section-accent shadow-[inset_0_0_20px_rgba(0,0,0,0.02)] relative z-10 border-y border-wedding-gold/20">
+        <section class="invite-section py-16 bg-section-accent rounded-[42px] overflow-hidden shadow-[inset_0_0_20px_rgba(0,0,0,0.02)] relative z-10 border-y border-wedding-gold/20">
             <div class="max-w-xl mx-auto px-4 text-center">
                 <div class="bg-white/90 p-10 rounded-sm shadow-xl backdrop-blur-sm border border-wedding-gold/30 transform transition hover:-translate-y-1 duration-500 relative" data-aos="zoom-in-up">
                     <!-- Họa tiết góc trong card -->
@@ -505,7 +528,7 @@ body::after {
         </div></section>
 
         <!-- Album Ảnh Cưới -->
-        <section class="luxury-section py-20 px-4 max-w-4xl mx-auto relative z-10"><div class="section-glow glow-gold"></div><div class="section-content">
+        <section class="invite-section luxury-section py-20 px-4 max-w-4xl mx-auto relative z-10"><div class="section-glow glow-gold"></div><div class="section-content">
             <h2 class="text-4xl font-serif text-wedding-primary mb-12 text-center tracking-[0.2em] uppercase" data-aos="fade-up">Thư viện Ảnh</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 <div class="gallery-item shadow-2xl border border-white/40" data-aos="zoom-in" data-aos-delay="0">
@@ -529,7 +552,7 @@ body::after {
         </div></section>
 
         <!-- Lịch trình ngày cưới -->
-        <section class="luxury-section py-20 px-4 max-w-xl mx-auto relative z-10"><div class="section-glow glow-green"></div><div class="section-content">
+        <section class="invite-section luxury-section py-20 px-4 max-w-xl mx-auto relative z-10"><div class="section-glow glow-green"></div><div class="section-content">
             <h2 class="text-4xl font-serif text-wedding-primary mb-16 text-center tracking-[0.2em] uppercase" data-aos="fade-up">Lịch trình</h2>
             
             <div class="relative border-l border-wedding-gold/50 ml-8 md:ml-12 space-y-12 pb-4">
@@ -581,7 +604,7 @@ body::after {
         </section>
 
         <!-- Countdown Section -->
-        <section class="luxury-section py-16 px-4 max-w-3xl mx-auto relative z-10 text-center"><div class="section-glow glow-gold"></div><div class="section-content">
+        <section class="invite-section luxury-section py-16 px-4 max-w-3xl mx-auto relative z-10 text-center"><div class="section-glow glow-gold"></div><div class="section-content">
             <h2 class="text-4xl font-script text-wedding-primary mb-8" data-aos="fade-up">Cùng đếm ngược</h2>
             <div id="countdown" class="flex justify-center gap-4 md:gap-8 text-wedding-primary" data-aos="zoom-in">
                 <div class="count-box flex flex-col items-center p-6 min-w-[70px] md:min-w-[90px]">
@@ -606,7 +629,7 @@ body::after {
         <!-- ==========================================
              PHẦN ĐỘNG 1: FORM RSVP
              ========================================== -->
-        <section id="rsvp-section" class="py-20 px-4 relative z-10">
+        <section id="rsvp-section" class="invite-section luxury-section py-20 px-4 relative z-10"><div class="section-glow glow-gold"></div><div class="section-content">
             <div class="max-w-md mx-auto bg-wedding-dark p-10 rounded-sm shadow-2xl relative" data-aos="fade-up">
                 <!-- Viền trang trí trong form -->
                 <div class="absolute inset-3 border border-wedding-gold/30 pointer-events-none"></div>
@@ -634,12 +657,12 @@ body::after {
                     </div>
                 </form>
             </div>
-        </section>
+        </div></section>
 
         <!-- ==========================================
              PHẦN ĐỘNG 2: SỔ LƯU BÚT VÀ AI
              ========================================== -->
-        <section class="py-20 px-4 relative z-10 bg-section-accent shadow-inner border-y border-wedding-gold/20">
+        <section class="invite-section luxury-section py-20 px-4 relative z-10">    <div class="section-glow glow-green"></div><div class="section-content">
             <div class="max-w-2xl mx-auto">
                 <h3 class="text-4xl font-serif text-center mb-12 text-wedding-primary tracking-[0.2em] uppercase" data-aos="fade-up">Sổ Lưu Bút</h3>
                 
@@ -677,10 +700,10 @@ body::after {
                     </div>
                 </div>
             </div>
-        </section>
+        </div></section>
 
         <!-- Hộp Mừng Cưới Button -->
-        <section class="py-20 text-center relative z-10" data-aos="zoom-in">
+        <section class="invite-section luxury-section py-20 text-center relative z-10" data-aos="zoom-in"><div class="section-glow glow-gold"></div><div class="section-content">
             <h3 class="text-3xl font-serif text-wedding-primary mb-8 tracking-[0.2em] uppercase">Mừng Cưới</h3>
             <button id="btn-open-gift" class="bg-wedding-dark hover:bg-black text-white w-28 h-36 rounded-sm shadow-2xl border-4 border-wedding-gold/80 relative transition-transform transform hover:-translate-y-2 flex flex-col items-center justify-center mx-auto group">
                 <div class="w-12 h-12 border border-wedding-gold rounded-full flex items-center justify-center mb-2 group-hover:rotate-12 transition duration-300">
@@ -688,13 +711,13 @@ body::after {
                 </div>
                 <div class="absolute -bottom-10 text-xs text-gray-500 font-sans font-semibold tracking-[0.2em] w-full text-center whitespace-nowrap uppercase">Nhấn để mở</div>
             </button>
-        </section>
+        </div></section>
 
         <footer class="py-12 text-center text-gray-500 text-sm border-t border-gray-200 mt-10 bg-white/50 backdrop-blur-sm relative z-10">
             <p class="font-script text-3xl mb-4 text-wedding-primary">Thank You</p>
             <p class="font-serif text-sm px-4">Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
             <p class="mt-4 font-sans text-[10px] uppercase tracking-[0.3em] text-gray-400">© 2026 Duy Hiệp - Minh Nguyệt</p>
-        </footer>
+        </footer></div>
     </main>
 
     <!-- ==========================================
