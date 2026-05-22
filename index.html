@@ -894,6 +894,27 @@ footer{
             
             AOS.init({ duration: 1200, once: true, offset: 50 });
 
+            const bgMusic = document.getElementById('bg-music');
+            const musicToggle = document.getElementById('music-toggle');
+
+            // Browser hiện nay chặn autoplay có âm thanh,
+            // nên cần play sau khi user tương tác.
+            bgMusic.play().then(() => {
+                musicToggle.innerHTML = '♫';
+            }).catch(() => {
+                musicToggle.innerHTML = '▶';
+            });
+
+            musicToggle.addEventListener('click', async () => {
+                if (bgMusic.paused) {
+                    await bgMusic.play();
+                    musicToggle.innerHTML = '♫';
+                } else {
+                    bgMusic.pause();
+                    musicToggle.innerHTML = '❚❚';
+                }
+            });
+
             setTimeout(() => {
                 splash.style.display = 'none';
                 AOS.refresh(); 
@@ -1117,7 +1138,7 @@ footer{
 <!-- Music Background -->
 <div class="music-player">
     <button id="music-toggle" class="music-btn">♫</button>
-    <audio id="bg-music" loop autoplay>
+    <audio id="bg-music" loop>
         <source src="https://cdn.chungdoi.com/music/beautiful-in-white.mp3" type="audio/mpeg">
     </audio>
 </div>
