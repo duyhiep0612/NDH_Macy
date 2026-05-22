@@ -553,7 +553,7 @@
         // KHU VỰC CẤU HÌNH API
         // ==========================================
         // Dán URL Web App của Google Apps Script vào biến này
-        const SCRIPT_URL = 'THAY_LINK_API_CUA_ANH_VAO_DAY';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec';
 
         // 5. API: Xử lý Form RSVP
         const rsvpForm = document.getElementById('rsvp-form');
@@ -562,7 +562,7 @@
         rsvpForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            if (SCRIPT_URL === 'THAY_LINK_API_CUA_ANH_VAO_DAY') {
+            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') {
                 alert('Vui lòng cấu hình SCRIPT_URL trong mã nguồn trước khi dùng!');
                 return;
             }
@@ -621,7 +621,7 @@
 
         // Tải dữ liệu lưu bút khi trang vừa load xong
         function loadGuestbook() {
-            if (SCRIPT_URL === 'THAY_LINK_API_CUA_ANH_VAO_DAY') return;
+            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') return;
 
             const loader = document.getElementById('gb-loading');
             loader.classList.remove('hidden');
@@ -650,7 +650,7 @@
         gbForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            if (SCRIPT_URL === 'THAY_LINK_API_CUA_ANH_VAO_DAY') {
+            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') {
                 alert('Vui lòng cấu hình SCRIPT_URL trong mã nguồn trước khi dùng!');
                 return;
             }
