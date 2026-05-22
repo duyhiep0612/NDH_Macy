@@ -561,11 +561,6 @@
 
         rsvpForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') {
-                alert('Vui lòng cấu hình SCRIPT_URL trong mã nguồn trước khi dùng!');
-                return;
-            }
 
             const originalText = btnSubmitRsvp.innerHTML;
             btnSubmitRsvp.innerHTML = '<div class="spinner"></div>';
@@ -621,8 +616,6 @@
 
         // Tải dữ liệu lưu bút khi trang vừa load xong
         function loadGuestbook() {
-            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') return;
-
             const loader = document.getElementById('gb-loading');
             loader.classList.remove('hidden');
 
@@ -649,11 +642,6 @@
         // Submit form lưu bút
         gbForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbxb8c_blK-q3IK9ZP6-14x7g-w9wggQdDLdS9j4k60J-_LCf96sH1I2UmXbbQQYN-PP/exec') {
-                alert('Vui lòng cấu hình SCRIPT_URL trong mã nguồn trước khi dùng!');
-                return;
-            }
 
             const name = document.getElementById('gb-name').value;
             const message = document.getElementById('gb-message').value;
