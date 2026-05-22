@@ -382,6 +382,75 @@ body::after {
     }
 }
 
+
+/* ===== MASTER FRAME LAYOUT ===== */
+
+body{
+    background:#e9e9e9 !important;
+}
+
+#main-content{
+    width:min(820px, calc(100vw - 24px));
+    margin:0 auto;
+    background:#f8f4ee;
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,.04),
+        0 30px 80px rgba(0,0,0,.18);
+    position:relative;
+}
+
+.invite-shell{
+    width:100%;
+    margin-inline:auto;
+    position:relative;
+    padding-bottom:40px;
+}
+
+.invite-section{
+    width:100%;
+    border-radius:0 !important;
+    margin:0 !important;
+}
+
+.luxury-section{
+    border-radius:0 !important;
+    max-width:none !important;
+}
+
+.hero-image{
+    border-radius:999px;
+}
+
+footer{
+    margin-top:0 !important;
+}
+
+.music-player{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:999;
+}
+
+.music-btn{
+    width:64px;
+    height:64px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    background:linear-gradient(135deg,#9f2d2d,#c77b49);
+    color:#fff;
+    box-shadow:0 10px 30px rgba(159,45,45,.35);
+    animation:musicPulse 2.5s infinite;
+    font-size:24px;
+}
+
+@keyframes musicPulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
 </style>
 </head>
 <body class="font-sans overflow-hidden antialiased relative" id="body-container">
@@ -1044,5 +1113,14 @@ body::after {
 
 
 </script>
+
+<!-- Music Background -->
+<div class="music-player">
+    <button id="music-toggle" class="music-btn">♫</button>
+    <audio id="bg-music" loop autoplay>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=wedding-day-110998.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
 </body>
 </html>
